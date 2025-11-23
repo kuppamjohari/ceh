@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Naval Intelligence: Target Identification</title>
+    <title>Naval Intelligence: Campaign Mode</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
@@ -23,189 +23,76 @@
             width: 100vw;
         }
 
-        /* --- USER PROVIDED FLAG CSS --- */
-        .flag-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 1rem;
-            filter: drop-shadow(0 0 10px rgba(255, 153, 51, 0.4));
-        }
+        /* --- FLAG CSS --- */
+        .flag-container { display: flex; justify-content: center; margin-bottom: 1rem; filter: drop-shadow(0 0 10px rgba(255, 153, 51, 0.4)); }
+        .stripe { width: 120px; height: 25px; }
+        #saffron { background: #FF9933; border-top-left-radius: 3px; border-top-right-radius: 3px; }
+        #white { background: #FFFFFF; display: flex; justify-content: center; align-items: center; }
+        #green { background: #138808; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; }
+        .ashok_chakra { height: 20px; width: 20px; animation: spin-slow 10s linear infinite; }
 
-        /* Stripe */
-        .stripe {
-            width: 120px;
-            height: 25px;
-        }
-
-        /* Saffron Stripe */
-        #saffron {
-            background: #FF9933;
-            border-top-left-radius: 3px;
-            border-top-right-radius: 3px;
-        }
-
-        /* White Stripe */
-        #white {
-            background: #FFFFFF;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Green Stripe */
-        #green {
-            background: #138808;
-            border-bottom-left-radius: 3px;
-            border-bottom-right-radius: 3px;
-        }
-
-        /* Ashoka Chakra Image */
-        .ashok_chakra {
-            height: 20px;
-            width: 20px;
-            animation: spin-slow 10s linear infinite;
-        }
-
-        /* --- DASHBOARD FLAG ICON CSS --- */
-        .flag-icon-container {
-            display: inline-flex;
-            flex-direction: column;
-            margin-right: 0.5rem;
-            vertical-align: middle;
-            filter: drop-shadow(0 0 5px rgba(255, 153, 51, 0.4));
-        }
-
-        .stripe-icon {
-            width: 36px;
-            height: 8px;
-        }
-
+        .flag-icon-container { display: inline-flex; flex-direction: column; margin-right: 0.5rem; vertical-align: middle; filter: drop-shadow(0 0 5px rgba(255, 153, 51, 0.4)); }
+        .stripe-icon { width: 36px; height: 8px; }
         #saffron-icon { background: #FF9933; border-top-left-radius: 2px; border-top-right-radius: 2px; }
         #white-icon { background: #FFFFFF; display: flex; justify-content: center; align-items: center; }
         #green-icon { background: #138808; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; }
+        .ashok_chakra-icon { height: 6px; width: 6px; animation: spin-slow 10s linear infinite; }
 
-        .ashok_chakra-icon {
-            height: 6px;
-            width: 6px;
-            animation: spin-slow 10s linear infinite;
-        }
-        /* --- END FLAG CSS --- */
-
-        /* CRT Scanline Effect */
+        /* CRT Effects */
         .scanlines {
-            background: linear-gradient(
-                to bottom,
-                rgba(255,255,255,0),
-                rgba(255,255,255,0) 50%,
-                rgba(0,0,0,0.2) 50%,
-                rgba(0,0,0,0.2)
-            );
-            background-size: 100% 4px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            pointer-events: none;
-            z-index: 50;
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2));
+            background-size: 100% 4px; position: fixed; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; z-index: 50;
         }
-
-        /* Radar Animation */
-        .radar-sweep {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background: conic-gradient(from 0deg, transparent 0deg, var(--radar-dim) 60deg, transparent 65deg);
-            animation: sweep 4s infinite linear;
-            border-right: 1px solid var(--radar-green);
-            z-index: 10;
-        }
-
-        @keyframes sweep {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .blip {
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            background-color: var(--radar-green);
-            border-radius: 50%;
-            box-shadow: 0 0 5px var(--radar-green);
-            opacity: 0;
-            animation: blink 4s infinite;
-        }
-
-        @keyframes blink {
-            0% { opacity: 0; }
-            15% { opacity: 1; }
-            40% { opacity: 0; }
-            100% { opacity: 0; }
-        }
-
-        /* Glitch Text Effect */
-        .glitch-text:hover {
-            text-shadow: 2px 0 #fff, -2px 0 #ff00c1;
-        }
-
-        /* Grid Background */
         .grid-bg {
-            background-image: 
-                linear-gradient(var(--radar-dim) 1px, transparent 1px),
-                linear-gradient(90deg, var(--radar-dim) 1px, transparent 1px);
-            background-size: 40px 40px;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            z-index: -1;
-            opacity: 0.3;
+            background-image: linear-gradient(var(--radar-dim) 1px, transparent 1px), linear-gradient(90deg, var(--radar-dim) 1px, transparent 1px);
+            background-size: 40px 40px; width: 100%; height: 100%; position: absolute; z-index: -1; opacity: 0.3;
         }
 
-        .typing-cursor::after {
-            content: '█';
-            animation: cursor 1s infinite;
+        /* Animations */
+        .radar-sweep {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%;
+            background: conic-gradient(from 0deg, transparent 0deg, var(--radar-dim) 60deg, transparent 65deg);
+            animation: sweep 4s infinite linear; border-right: 1px solid var(--radar-green); z-index: 10;
         }
+        @keyframes sweep { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        
+        .blip { position: absolute; width: 8px; height: 8px; background-color: var(--radar-green); border-radius: 50%; box-shadow: 0 0 5px var(--radar-green); opacity: 0; animation: blink 4s infinite; }
+        @keyframes blink { 0% { opacity: 0; } 15% { opacity: 1; } 40% { opacity: 0; } 100% { opacity: 0; } }
 
-        @keyframes cursor {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
+        .glitch-text:hover { text-shadow: 2px 0 #fff, -2px 0 #ff00c1; }
+        .typing-cursor::after { content: '█'; animation: cursor 1s infinite; }
+        @keyframes cursor { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+        /* Map specific styles */
+        #tactical-boat { 
+            transition: left 0.5s linear, top 0.5s linear; 
         }
+        
+        .map-node { cursor: pointer; transition: all 0.3s ease; }
+        .map-node:hover { transform: scale(1.3); filter: drop-shadow(0 0 8px var(--radar-green)); }
+        .map-node.active { background-color: #fff; box-shadow: 0 0 15px #fff; }
+
+        /* Flag Raising Animation - Adjusted to plant stick ON the node */
+        @keyframes raise {
+            0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+            100% { transform: translate(-50%, -100%) scale(1); opacity: 1; }
+        }
+        .animate-raise { animation: raise 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
 
         /* Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #001100; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #004400; 
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--radar-green); 
-        }
-
-        .active-mode .radar-sweep {
-            animation-duration: 1.5s; /* Faster sweep for active scan */
-            background: conic-gradient(from 0deg, transparent 0deg, rgba(255, 50, 50, 0.4) 60deg, transparent 65deg);
-            border-right: 2px solid red;
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #001100; }
+        ::-webkit-scrollbar-thumb { background: #004400; }
     </style>
 </head>
 <body class="flex flex-col h-[100dvh] relative overflow-hidden">
 
     <div class="scanlines"></div>
-    
     <div class="grid-bg"></div>
 
-    <div id="intro-screen" class="absolute inset-0 z-40 bg-black flex flex-col items-center justify-center transition-opacity duration-1000 px-4">
-        
+    <!-- SCREEN 1: INTRO -->
+    <div id="intro-screen" class="absolute inset-0 z-50 bg-black flex flex-col items-center justify-center transition-opacity duration-1000 px-4">
         <div class="text-center mb-10 md:mb-[88px] w-full max-w-4xl">
-            
             <div class="flag-container">
                 <div id="flag">
                     <div class="stripe" id="saffron"></div>
@@ -219,21 +106,96 @@
             <p class="text-xs md:text-sm tracking-[0.3em] md:tracking-[0.5em] animate-pulse">UNIDENTIFIED VESSEL DETECTED</p>
         </div>
 
-        <div class="relative group cursor-pointer" onclick="initializeSystem()">
+        <div class="relative group cursor-pointer" onclick="goToMap()">
             <div class="absolute -inset-4 bg-green-500/20 rounded-2xl animate-ping opacity-20"></div>
             <div class="absolute -inset-1 border border-green-500/50 rounded-2xl animate-pulse"></div>
-            
-            <img src="assets/intro-navy.png" alt="Identify Target" class="relative z-10 w-full max-w-[280px] md:max-w-[320px] h-auto rounded-2xl border-2 border-green-500 shadow-[0_0_20px_rgba(0,255,65,0.3)] hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,65,0.6)] transition-all duration-300">
-            
-            <p class="mt-4 text-center text-xs text-green-400">[ CLICK TO IDENTIFY TARGET ]</p>
+            <img src="intro-navy.png" alt="Identify Target" class="relative z-10 w-full max-w-[280px] md:max-w-[320px] h-auto rounded-2xl border-2 border-green-500 shadow-[0_0_20px_rgba(0,255,65,0.3)] hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,65,0.6)] transition-all duration-300">
+            <p class="mt-4 text-center text-xs text-green-400">[ CLICK TO ACCESS TACTICAL MAP ]</p>
         </div>
     </div>
 
-    <div id="dashboard" class="flex-1 flex flex-col md:flex-row p-4 gap-4 opacity-0 pointer-events-none transition-opacity duration-1000 h-full">
+    <!-- SCREEN 2: TACTICAL RIVER MAP -->
+    <div id="map-screen" class="absolute inset-0 z-40 bg-black flex flex-col items-center justify-center transition-opacity duration-1000 opacity-0 pointer-events-none p-4">
+        <h2 class="text-2xl md:text-4xl font-bold text-green-500 mb-8 border-b border-green-800 pb-2">SELECT OPERATION DAY</h2>
         
+        <div class="relative w-full max-w-4xl h-[60vh] border border-green-800 bg-green-900/10 rounded-lg overflow-hidden relative shadow-[0_0_50px_rgba(0,255,65,0.1)]">
+            <!-- River Path SVG -->
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 800 400" preserveAspectRatio="none">
+                <!-- Winding River Path -->
+                <path d="M 50 350 C 150 350, 150 250, 250 250 C 350 250, 350 320, 450 300 C 550 280, 550 150, 650 150 C 750 150, 750 50, 780 50" 
+                      fill="none" stroke="rgba(0, 255, 65, 0.3)" stroke-width="40" stroke-linecap="round" class="filter blur-sm"/>
+                <path d="M 50 350 C 150 350, 150 250, 250 250 C 350 250, 350 320, 450 300 C 550 280, 550 150, 650 150 C 750 150, 750 50, 780 50" 
+                      fill="none" stroke="rgba(0, 255, 65, 0.8)" stroke-width="2" stroke-dasharray="10 5" />
+            </svg>
+
+            <!-- Checkpoints -->
+            <div class="absolute left-[6%] top-[87%] text-center">
+                <div class="w-4 h-4 bg-green-500 rounded-full shadow-[0_0_10px_#0f0]"></div>
+                <div class="text-[10px] mt-1 text-green-300">HQ</div>
+            </div>
+
+            <!-- Day 1 -->
+            <div onclick="selectDay(1)" class="absolute left-[31%] top-[62%] text-center group cursor-pointer map-node">
+                <div class="w-6 h-6 bg-black border-2 border-green-500 rounded-full flex items-center justify-center group-hover:bg-green-500 transition-colors">1</div>
+                <div class="text-xs mt-1 font-bold bg-black/50 px-1">DAY 1</div>
+            </div>
+
+            <!-- Day 2 -->
+            <div onclick="selectDay(2)" class="absolute left-[56%] top-[75%] text-center group cursor-pointer map-node">
+                <div class="w-6 h-6 bg-black border-2 border-green-500 rounded-full flex items-center justify-center group-hover:bg-green-500 transition-colors">2</div>
+                <div class="text-xs mt-1 font-bold bg-black/50 px-1">DAY 2</div>
+            </div>
+
+            <!-- Day 3 -->
+            <div onclick="selectDay(3)" class="absolute left-[69%] top-[37%] text-center group cursor-pointer map-node">
+                <div class="w-6 h-6 bg-black border-2 border-green-500 rounded-full flex items-center justify-center group-hover:bg-green-500 transition-colors">3</div>
+                <div class="text-xs mt-1 font-bold bg-black/50 px-1">DAY 3</div>
+            </div>
+
+            <!-- Day 4 -->
+            <div onclick="selectDay(4)" class="absolute left-[81%] top-[37%] text-center group cursor-pointer map-node">
+                <div class="w-6 h-6 bg-black border-2 border-green-500 rounded-full flex items-center justify-center group-hover:bg-green-500 transition-colors">4</div>
+                <div class="text-xs mt-1 font-bold bg-black/50 px-1">DAY 4</div>
+            </div>
+
+             <!-- Day 5 -->
+             <div onclick="selectDay(5)" class="absolute left-[95%] top-[12%] text-center group cursor-pointer map-node">
+                <div class="w-6 h-6 bg-black border-2 border-green-500 rounded-full flex items-center justify-center group-hover:bg-green-500 transition-colors">5</div>
+                <div class="text-xs mt-1 font-bold bg-black/50 px-1">DAY 5</div>
+            </div>
+
+            <!-- THE WARSHIP BOAT -->
+            <div id="tactical-boat" class="absolute w-12 h-12 text-green-300 drop-shadow-[0_0_5px_rgba(0,255,65,0.8)] z-10" style="left: 6%; top: 85%; transform: translate(-50%, -50%);">
+                <!-- Warship SVG Path -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" class="w-full h-full">
+                     <path d="M10,65 L15,75 H85 L90,65 H10 Z M25,65 V50 H35 V40 H40 V30 H60 V40 H65 V50 H75 V65 H25 Z M45,30 V20 H55 V30 H45 Z M80,65 L85,55 H95 L90,65 H80 Z" />
+                </svg>
+            </div>
+
+            <!-- DYNAMIC VICTORY FLAG -->
+            <div id="victory-flag" class="absolute hidden z-20 flex-col items-center">
+                <div class="flex flex-col shadow-[0_0_10px_rgba(255,153,51,0.8)]">
+                     <div class="w-8 h-2 bg-[#FF9933] rounded-t-[1px]"></div>
+                     <div class="w-8 h-2 bg-white flex justify-center items-center">
+                         <div class="w-1.5 h-1.5 rounded-full bg-blue-800 animate-spin"></div>
+                     </div>
+                     <div class="w-8 h-2 bg-[#138808] rounded-b-[1px]"></div>
+                </div>
+                <div class="w-0.5 h-8 bg-gray-400"></div>
+            </div>
+
+        </div>
+        <p class="mt-4 text-green-400 text-sm animate-pulse">SELECT A DAY TO DEPLOY UNIT</p>
+    </div>
+
+    <!-- SCREEN 3: DASHBOARD (RADAR + MODULES) -->
+    <div id="dashboard-screen" class="absolute inset-0 z-30 flex flex-col md:flex-row p-4 gap-4 opacity-0 pointer-events-none transition-opacity duration-1000 bg-black">
+        
+        <!-- Left Panel: Sonar Array -->
         <div class="w-full md:w-1/3 flex flex-col items-center justify-center border border-green-800 bg-black/80 relative p-4 rounded-lg shadow-[0_0_15px_rgba(0,255,65,0.1)]">
             <h2 class="absolute top-4 left-4 text-xl font-bold border-b border-green-600 pb-1 flex items-center">
-                <div class="flag-icon-container">
+                <!-- Flag Icon acts as Back Button -->
+                <div onclick="backToMap()" class="flag-icon-container cursor-pointer hover:opacity-80 hover:scale-105 transition-all" title="Click to Return to Map">
                     <div class="stripe-icon" id="saffron-icon"></div>
                     <div class="stripe-icon" id="white-icon">
                         <img class="ashok_chakra-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/630px-Ashoka_Chakra.svg.png" alt="Ashoka Chakra">
@@ -243,57 +205,40 @@
                 SONAR ARRAY
             </h2>
             
-            <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-green-900 bg-green-900/10 overflow-hidden shadow-inner" id="radar-container">
+            <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-green-900 bg-green-900/10 overflow-hidden shadow-inner mt-8 md:mt-0" id="radar-container">
                 <div class="absolute inset-0 border border-green-900/50 rounded-full m-8"></div>
                 <div class="absolute inset-0 border border-green-900/50 rounded-full m-16"></div>
                 <div class="absolute inset-0 border border-green-900/50 rounded-full m-24"></div>
-                
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <div class="w-full h-px bg-green-900/50"></div>
-                </div>
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <div class="h-full w-px bg-green-900/50"></div>
-                </div>
-
+                <div class="absolute inset-0 flex items-center justify-center"><div class="w-full h-px bg-green-900/50"></div></div>
+                <div class="absolute inset-0 flex items-center justify-center"><div class="h-full w-px bg-green-900/50"></div></div>
                 <div class="radar-sweep" id="scanner"></div>
-
                 <div class="absolute top-1/2 left-1/2 w-2 h-2 bg-green-500 rounded-full -translate-x-1/2 -translate-y-1/2 shadow-[0_0_10px_#00ff41]"></div>
-                
                 <div id="blip-container"></div>
             </div>
 
             <div class="mt-6 w-full">
                 <div class="flex justify-between text-xs text-green-700 mb-1">
-                    <span>STATUS: <span id="system-status" class="text-green-400 animate-pulse">ONLINE</span></span>
+                    <span>DEPLOYMENT: <span id="current-day-label" class="text-green-400 font-bold">DAY 1</span></span>
                     <span>COORDS: <span id="coords">34.55, -12.01</span></span>
                 </div>
                 <div class="h-2 w-full bg-green-900/30 rounded-full overflow-hidden">
                     <div class="h-full bg-green-500 w-2/3 animate-pulse"></div>
                 </div>
             </div>
+            
+            <button onclick="backToMap()" class="mt-4 border border-red-900 text-red-500 hover:bg-red-900/30 px-4 py-2 rounded text-xs w-full transition-colors">
+                ABORT / RETURN TO MAP
+            </button>
         </div>
 
+        <!-- Right Panel: Intel & Communication -->
         <div class="w-full md:w-2/3 flex flex-col gap-4">
-            
-            <div class="flex flex-wrap gap-2 p-2 border border-green-800 bg-black/80 rounded-lg">
-                <button onclick="loadModule(1)" class="flex-1 min-w-[120px] py-2 px-4 border border-green-700 hover:bg-green-900 text-xs md:text-sm transition-colors text-left flex items-center gap-2 group">
-                    <div class="w-2 h-2 bg-green-500 rounded-full opacity-50 group-hover:opacity-100"></div>
-                    MOD 01: INTRO
-                </button>
-                <button onclick="loadModule(2)" class="flex-1 min-w-[120px] py-2 px-4 border border-green-700 hover:bg-green-900 text-xs md:text-sm transition-colors text-left flex items-center gap-2 group">
-                    <div class="w-2 h-2 bg-green-500 rounded-full opacity-50 group-hover:opacity-100"></div>
-                    MOD 02: RECON
-                </button>
-                <button onclick="loadModule(3)" class="flex-1 min-w-[120px] py-2 px-4 border border-green-700 hover:bg-green-900 text-xs md:text-sm transition-colors text-left flex items-center gap-2 group">
-                    <div class="w-2 h-2 bg-green-500 rounded-full opacity-50 group-hover:opacity-100"></div>
-                    MOD 03: SCAN
-                </button>
-                <button onclick="loadModule(4)" class="flex-1 min-w-[120px] py-2 px-4 border border-green-700 hover:bg-green-900 text-xs md:text-sm transition-colors text-left flex items-center gap-2 group">
-                    <div class="w-2 h-2 bg-green-500 rounded-full opacity-50 group-hover:opacity-100"></div>
-                    MOD 04: ENUM
-                </button>
+            <!-- Dynamic Module Buttons -->
+            <div id="module-buttons-container" class="flex flex-wrap gap-2 p-2 border border-green-800 bg-black/80 rounded-lg">
+                <!-- Buttons injected by JS -->
             </div>
 
+            <!-- Content Area -->
             <div class="flex-1 border border-green-800 bg-black/90 p-6 rounded-lg overflow-y-auto relative shadow-[inset_0_0_20px_rgba(0,20,0,1)] font-mono">
                 <div class="absolute top-2 right-2 flex gap-1">
                     <div class="w-3 h-3 rounded-full bg-red-500 opacity-50"></div>
@@ -302,14 +247,13 @@
                 </div>
 
                 <div id="content-display" class="h-full flex flex-col">
-                    <h3 id="module-title" class="text-2xl font-bold mb-4 border-b border-green-800 pb-2 text-green-300">SYSTEM READY...</h3>
-                    
+                    <h3 id="module-title" class="text-2xl font-bold mb-4 border-b border-green-800 pb-2 text-green-300">AWAITING INPUT...</h3>
                     <div class="flex-1 overflow-y-auto pr-2">
                         <p id="module-text" class="text-green-400 leading-relaxed whitespace-pre-line typing-cursor">
-                            Waiting for officer input. Select a module to begin target analysis.
+                            Target area reached. 
+                            Select a module from the top panel to begin analysis for this day.
                         </p>
                     </div>
-                    
                     <div class="mt-4 pt-4 border-t border-green-800 text-xs text-green-600 flex justify-between">
                         <span>SECURE CONNECTION ESTABLISHED</span>
                         <span id="timestamp">00:00:00</span>
@@ -320,134 +264,180 @@
     </div>
 
     <script>
-        // Content Database
-        const modules = {
-            1: {
-                title: "MODULE 01: INTRODUCTION TO ETHICAL HACKING",
-                content: `> INITIALIZING BRIEFING...
-> LOADING CORE PROTOCOLS...
-
-OBJECTIVE:
-Learn the fundamentals and key issues in information security.
-
-KEY DATA POINTS:
-- Basics of Ethical Hacking: Understanding the mindset of the enemy.
-- Information Security Controls: The shields of the vessel.
-- Relevant Laws: The rules of engagement (RoE).
-- Standard Procedures: The chain of command for cyber defense.
-
-SUMMARY:
-Before engaging the target, an officer must understand the legal and ethical boundaries. This module establishes the foundation for all future operations.`,
-                radarMode: "normal"
-            },
-            2: {
-                title: "MODULE 02: FOOTPRINTING & RECONNAISSANCE",
-                content: `> ENGAGING LONG-RANGE SENSORS...
-> ANALYZING SIGNAL TRAFFIC...
-
-OBJECTIVE:
-Learn how to use the latest techniques and tools for footprinting and reconnaissance. This is the critical PRE-ATTACK phase.
-
-TACTICAL BREAKDOWN:
-
-1. PASSIVE RECONNAISSANCE (Silent Running):
-   - Gathering info without engaging the target directly.
-   - E.g., Checking public records, social media (OSINT), job postings.
-   - The enemy does NOT know we are watching.
-
-2. ACTIVE RECONNAISSANCE (Sonar Pings):
-   - Directly interacting with the target system.
-   - E.g., Pinging the server, extracting metadata.
-   - Risk of detection: HIGH.
-
-SUMMARY:
-Like identifying a boat by its silhouette on the horizon vs sending a radar ping.`,
-                radarMode: "scan"
-            },
-            3: {
-                title: "MODULE 03: SCANNING NETWORKS",
-                content: `> MAPPING NETWORK TOPOLOGY...
-> IDENTIFYING OPEN PORTS...
-
-OBJECTIVE:
-Learn different network scanning techniques and countermeasures.
-
-OPERATIONAL DETAILS:
-- Port Scanning: Checking which doors on the boat are open.
-- Vulnerability Scanning: Checking if the doors have rusty locks.
-- Network Mapping: Drawing the blueprint of the enemy vessel.
-
-COUNTERMEASURES:
-- Firewalls (Hull Plating)
-- IDS/IPS (Internal Sensors)
-
-SUMMARY:
-We are now actively probing the target to find a point of entry. Stealth is compromised; speed is essential.`,
-                radarMode: "intense"
-            },
-            4: {
-                title: "MODULE 04: ENUMERATION",
-                content: `> EXTRACTING USER DATA...
-> LISTING SHARED RESOURCES...
-
-OBJECTIVE:
-Learn various enumeration techniques to extract specific details.
-
-TARGET VECTORS:
-- Border Gateway Protocol (BGP): Manipulating routing paths.
-- Network File Sharing (NFS): Accessing unsecured cargo holds.
-- Usernames, Machine Names, Share paths.
-
-STRATEGY:
-This is the process of establishing a dialogue with the target system to extract valid user accounts or poorly protected resources.
-
-STATUS:
-Target fully identified. Ready for engagement.`,
-                radarMode: "locked"
-            }
+        // --- 1. COORDINATE SYSTEM FOR RIVER MAP ---
+        const mapCoords = {
+            0: { left: '6%', top: '85%' },   // Start
+            1: { left: '31%', top: '62%' },  // Day 1
+            2: { left: '56%', top: '75%' },  // Day 2
+            3: { left: '69%', top: '37%' },  // Day 3
+            4: { left: '81%', top: '37%' },  // Day 4
+            5: { left: '95%', top: '12%' }   // Day 5
         };
 
-        // System Variables
-        let currentInterval = null;
-        let typingTimeout = null; // Track active typing
-        const blipContainer = document.getElementById('blip-container');
-        const radar = document.getElementById('radar-container');
-        const scanner = document.getElementById('scanner');
+        const riverWaypoints = [
+            { left: '6%', top: '85%' },   // HQ
+            { left: '18%', top: '85%' },  // Bend 1
+            { left: '25%', top: '70%' },  // Approach D1
+            { left: '31%', top: '62%' },  // DAY 1
+            { left: '40%', top: '65%' },  // Leaving D1
+            { left: '43%', top: '80%' },  // Bend 2 (Down)
+            { left: '56%', top: '75%' },  // DAY 2
+            { left: '62%', top: '60%' },  // Bend 3 (Up)
+            { left: '69%', top: '37%' },  // DAY 3
+            { left: '81%', top: '37%' },  // DAY 4
+            { left: '88%', top: '25%' },  // Bend 4
+            { left: '95%', top: '12%' }   // DAY 5
+        ];
 
-        // Initialize System (Transition from Landing to Main)
-        function initializeSystem() {
-            const intro = document.getElementById('intro-screen');
-            const dashboard = document.getElementById('dashboard');
+        // --- 2. MODULE DATABASE (20 Modules) ---
+        const moduleDB = {};
+        for (let i = 1; i <= 20; i++) {
+            moduleDB[i] = {
+                title: `MODULE ${i.toString().padStart(2, '0')}: CLASSIFIED`,
+                content: `> DECRYPTING MODULE ${i}...\n> LOADING DATA...\n\nObjective:\nAnalysis of Sector ${i} vulnerabilities.\n\nIntel:\nSpecific threat vectors identified in this region require immediate attention. Proceed with standard enumeration protocols.\n\nStatus:\nReady for execution.`
+            };
+        }
+        moduleDB[1].title = "MODULE 01: INTRO TO HACKING";
+        moduleDB[2].title = "MODULE 02: RECONNAISSANCE";
+        moduleDB[3].title = "MODULE 03: SCANNING NETWORKS";
+        moduleDB[4].title = "MODULE 04: ENUMERATION";
 
-            // Play nice visuals
-            intro.style.opacity = '0';
+        let typingTimeout = null;
+
+        function goToMap() {
+            document.getElementById('intro-screen').style.opacity = '0';
             setTimeout(() => {
-                intro.style.display = 'none';
-                dashboard.style.opacity = '1';
-                dashboard.style.pointerEvents = 'all';
-                
-                // Start the clock
-                setInterval(updateTime, 1000);
-                
-                // Default Blips
-                createRandomBlips(3);
+                document.getElementById('intro-screen').style.display = 'none';
+                const mapScreen = document.getElementById('map-screen');
+                mapScreen.style.opacity = '1';
+                mapScreen.style.pointerEvents = 'all';
             }, 1000);
         }
 
-        // Typewriter Effect Function
-        function typeWriter(text, elementId) {
-            // Clear any existing timeout to prevent scrambling
-            if (typingTimeout) {
-                clearTimeout(typingTimeout);
+        // --- NAVIGATOR FUNCTION ---
+        function selectDay(targetDayNum) {
+            const boat = document.getElementById('tactical-boat');
+            
+            let targetIndex = -1;
+            const targetCoord = mapCoords[targetDayNum];
+            
+            for(let i=0; i<riverWaypoints.length; i++) {
+                if(riverWaypoints[i].left === targetCoord.left && riverWaypoints[i].top === targetCoord.top) {
+                    targetIndex = i;
+                    break;
+                }
             }
 
+            if (targetIndex === -1) return; 
+
+            // Always start moving from wherever the boat currently is?
+            // For simplicity, snapping boat to start for this animation
+            // In a real game, you'd find current index and move forward/backward
+            let currentIndex = 0;
+            boat.style.left = riverWaypoints[0].left;
+            boat.style.top = riverWaypoints[0].top;
+
+            function step() {
+                if (currentIndex >= targetIndex) {
+                    // ARRIVED - Trigger Flag for ALL days now
+                    triggerFlag(targetDayNum);
+                    return;
+                }
+                
+                currentIndex++;
+                const point = riverWaypoints[currentIndex];
+                boat.style.left = point.left;
+                boat.style.top = point.top;
+                
+                setTimeout(step, 500); 
+            }
+            
+            step();
+        }
+
+        function triggerFlag(dayNum) {
+            const flag = document.getElementById('victory-flag');
+            const targetCoord = mapCoords[dayNum];
+            
+            // Move flag to the TARGET NODE CENTER
+            flag.style.left = targetCoord.left;
+            flag.style.top = targetCoord.top;
+            
+            // Show and Animate Flag
+            flag.classList.remove('hidden');
+            flag.classList.add('animate-raise');
+
+            // Wait for flag animation (1.5s) then load dashboard
+            setTimeout(() => {
+                loadDashboard(dayNum);
+                // Reset flag state
+                setTimeout(() => {
+                    flag.classList.add('hidden');
+                    flag.classList.remove('animate-raise');
+                    // Reset boat to start
+                    const boat = document.getElementById('tactical-boat');
+                    boat.style.left = '6%';
+                    boat.style.top = '85%';
+                }, 1000);
+            }, 2000);
+        }
+
+        function loadDashboard(dayNum) {
+            const mapScreen = document.getElementById('map-screen');
+            mapScreen.style.opacity = '0';
+            mapScreen.style.pointerEvents = 'none';
+
+            const dashScreen = document.getElementById('dashboard-screen');
+            dashScreen.style.display = 'flex'; 
+            setTimeout(() => {
+                dashScreen.style.opacity = '1';
+                dashScreen.style.pointerEvents = 'all';
+            }, 100);
+
+            document.getElementById('current-day-label').innerText = `DAY ${dayNum}`;
+            const btnContainer = document.getElementById('module-buttons-container');
+            btnContainer.innerHTML = ''; 
+            
+            const startMod = (dayNum - 1) * 4 + 1;
+            const endMod = dayNum * 4;
+
+            for (let i = startMod; i <= endMod; i++) {
+                const btn = document.createElement('button');
+                btn.className = "flex-1 min-w-[120px] py-2 px-4 border border-green-700 hover:bg-green-900 text-xs md:text-sm transition-colors text-left flex items-center gap-2 group text-green-400";
+                btn.onclick = () => displayModule(i);
+                btn.innerHTML = `
+                    <div class="w-2 h-2 bg-green-500 rounded-full opacity-50 group-hover:opacity-100"></div>
+                    MOD ${i.toString().padStart(2, '0')}
+                `;
+                btnContainer.appendChild(btn);
+            }
+            createRandomBlips(3 + dayNum); 
+            setInterval(updateTime, 1000);
+        }
+
+        function backToMap() {
+            const dashScreen = document.getElementById('dashboard-screen');
+            dashScreen.style.opacity = '0';
+            dashScreen.style.pointerEvents = 'none';
+            
+            const mapScreen = document.getElementById('map-screen');
+            mapScreen.style.opacity = '1';
+            mapScreen.style.pointerEvents = 'all';
+        }
+
+        function displayModule(id) {
+            const mod = moduleDB[id];
+            document.getElementById('module-title').innerText = mod.title;
+            typeWriter(mod.content, 'module-text');
+        }
+
+        function typeWriter(text, elementId) {
+            if (typingTimeout) clearTimeout(typingTimeout);
             const el = document.getElementById(elementId);
             el.innerHTML = '';
             el.classList.add('typing-cursor');
-            
             let i = 0;
-            const speed = 10; // Speed in ms
-
+            const speed = 10; 
             function type() {
                 if (i < text.length) {
                     el.innerHTML += text.charAt(i);
@@ -461,99 +451,28 @@ Target fully identified. Ready for engagement.`,
             type();
         }
 
-        // Update Clock
         function updateTime() {
             const now = new Date();
             document.getElementById('timestamp').innerText = now.toISOString().split('T')[1].split('.')[0] + " ZULU";
-            
-            // Random coordinate update
             if(Math.random() > 0.5) {
-                document.getElementById('coords').innerText = 
-                    (Math.random() * 90).toFixed(2) + ", " + (Math.random() * 180 * -1).toFixed(2);
-            }
-        }
-
-        // Radar Behavior Logic
-        function updateRadar(mode) {
-            // Clear existing blips
-            blipContainer.innerHTML = '';
-            radar.classList.remove('active-mode');
-            scanner.style.borderRight = '1px solid var(--radar-green)';
-
-            if (mode === 'normal') {
-                createRandomBlips(3);
-                document.getElementById('system-status').innerText = "MONITORING";
-                document.getElementById('system-status').className = "text-green-400 animate-pulse";
-            } 
-            else if (mode === 'scan') {
-                // Visualization of Passive vs Active
-                createRandomBlips(5); // Passive targets
-                
-                // Simulate Active Ping (Red blip appears intermittently)
-                const activeBlip = document.createElement('div');
-                activeBlip.className = 'blip';
-                activeBlip.style.backgroundColor = 'red';
-                activeBlip.style.boxShadow = '0 0 10px red';
-                activeBlip.style.top = '30%';
-                activeBlip.style.left = '60%';
-                activeBlip.style.animation = 'blink 1s infinite'; // Fast blink
-                blipContainer.appendChild(activeBlip);
-                
-                radar.classList.add('active-mode'); // Faster sweep
-                document.getElementById('system-status').innerText = "ACTIVE SCANNING";
-                document.getElementById('system-status').className = "text-red-500 animate-pulse";
-            }
-            else if (mode === 'intense') {
-                createRandomBlips(15);
-                document.getElementById('system-status').innerText = "NET MAPPING";
-            }
-            else if (mode === 'locked') {
-                // Just one big target
-                const lockedBlip = document.createElement('div');
-                lockedBlip.className = 'absolute w-4 h-4 bg-red-500 rounded-full shadow-[0_0_15px_red] animate-ping';
-                lockedBlip.style.top = '40%';
-                lockedBlip.style.left = '40%';
-                blipContainer.appendChild(lockedBlip);
-                
-                const staticBlip = document.createElement('div');
-                staticBlip.className = 'absolute w-4 h-4 bg-red-500 rounded-full';
-                staticBlip.style.top = '40%';
-                staticBlip.style.left = '40%';
-                blipContainer.appendChild(staticBlip);
-
-                document.getElementById('system-status').innerText = "TARGET LOCKED";
-                document.getElementById('system-status').className = "text-red-500 font-bold";
+                document.getElementById('coords').innerText = (Math.random() * 90).toFixed(2) + ", " + (Math.random() * 180 * -1).toFixed(2);
             }
         }
 
         function createRandomBlips(count) {
+            const container = document.getElementById('blip-container');
+            container.innerHTML = '';
             for(let i=0; i<count; i++) {
                 const blip = document.createElement('div');
                 blip.className = 'blip';
-                // Random position within circle (roughly)
                 const top = 20 + Math.random() * 60;
                 const left = 20 + Math.random() * 60;
-                
-                // Offset animation delay so they don't blink in unison
                 blip.style.animationDelay = (Math.random() * 2) + 's';
                 blip.style.top = top + '%';
                 blip.style.left = left + '%';
-                blipContainer.appendChild(blip);
+                container.appendChild(blip);
             }
         }
-
-        // Load Content
-        function loadModule(id) {
-            const mod = modules[id];
-            
-            // Update Text
-            document.getElementById('module-title').innerText = mod.title;
-            typeWriter(mod.content, 'module-text');
-
-            // Update Radar Visuals
-            updateRadar(mod.radarMode);
-        }
-
     </script>
 </body>
 </html>
