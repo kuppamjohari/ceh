@@ -1,0 +1,124 @@
+{
+  "id": "module-02",
+  "title": "MODULE 02: Footprinting & RECONNAISSANCE",
+  "theme": {
+    "style": "naval",
+    "primaryColor": "#001B33",
+    "accentColor": "#00A8C6",
+    "textColor": "#E6F1F5"
+  },
+  "blocks": [
+
+    {
+      "type": "header",
+      "content": "WHAT IS RECONNAISSANCE?"
+    },
+    {
+      "type": "text",
+      "content": "Reconnaissance is the first step in ethical hacking. It means gathering information about a target before doing any testing. In naval style, it is like observing an unknown ship from a safe distance to understand its direction and strength."
+    },
+
+    {
+      "type": "header",
+      "content": "PASSIVE RECONNAISSANCE"
+    },
+    {
+      "type": "text",
+      "content": "Passive reconnaissance means collecting information without interacting with the target. The target cannot detect you. It is like studying an enemy ship using satellite images or long-range sensors without entering their radar range."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Google Dorking – Use special search operators to find exposed files and hidden pages",
+        "WHOIS – Find domain and IP owner details",
+        "Wayback Machine – View old versions of websites",
+        "Shodan – Discover internet-connected devices like cameras, servers, and routers",
+        "Public Social Media – Collect employee or company information"
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/M9dJ2iA.jpeg",
+        "https://i.imgur.com/GVddoTz.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "OSINT (OPEN-SOURCE INTELLIGENCE)"
+    },
+    {
+      "type": "text",
+      "content": "Collecting information from public sources. It is like using sea maps, news, satellite images, and public shipping data to plan a naval mission. OSINT is a major part of passive reconnaissance."
+    },
+    {
+      "type": "points",
+      "content": [
+        "https://osintframework.com/"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "GOOGLE DORKING"
+    },
+    {
+      "type": "text",
+      "content": "It helps find hidden or sensitive public information. It is like using an advanced radar filter to spot things normal scans miss."
+    },
+    {
+      "type": "points",
+      "content": [
+        "site: — Search within a specific website",
+        "filetype: — Find specific file types like PDF, XLSX",
+        "intitle: — Search for pages with specific words in the title",
+        "inurl: — Find URLs containing specific keywords",
+        "https://taksec.github.io/google-dorks-bug-bounty/"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "ACTIVE RECONNAISSANCE"
+    },
+    {
+      "type": "text",
+      "content": "Active reconnaissance means directly interacting with the target to collect detailed information. This is like sending a small naval drone close to an enemy ship to scan it. Because you make contact, the target may detect your activity."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Direct interaction with the target system",
+        "More detailed information",
+        "Higher risk of detection"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "ACTIVE RECON TOOLS"
+    },
+    {
+      "type": "points",
+      "content": [
+        "Nmap – Port scanning and service discovery",
+        "Nmap Scripts (NSE) – Deep scanning for vulnerabilities",
+        "Netcat – Banner grabbing",
+        "Hping3 – Packet crafting and network testing"
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/BsSWfKd.jpeg"
+      ]
+    },
+
+    {
+      "type": "text",
+      "content": ">> MODULE 02 COMPLETE. MODULE 03 WILL CONTINUE WITH ACTIVE SCANNING."
+    }
+
+  ]
+}

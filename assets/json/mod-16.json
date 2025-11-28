@@ -1,0 +1,151 @@
+{
+  "id": "module-16",
+  "title": "MODULE 16: HACKING WIRELESS NETWORKS",
+  "theme": {
+    "style": "naval",
+    "primaryColor": "#001B33",
+    "accentColor": "#00A8C6",
+    "textColor": "#E6F1F5"
+  },
+  "blocks": [
+
+    {
+      "type": "header",
+      "content": "WHAT IS WI-FI HACKING?"
+    },
+    {
+      "type": "text",
+      "content": "Wi-Fi hacking means testing the security of wireless networks. In naval style, it is like intercepting radio communication signals between ships to understand how secure their channel is. This is done only in labs or networks you own."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Find weak Wi-Fi passwords",
+        "Test Wi-Fi encryption strength",
+        "Capture handshake packets",
+        "Use controlled brute-force attacks in a lab"
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/5qTtYuk.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "HOW WI-FI PASSWORD CRACKING WORKS"
+    },
+    {
+      "type": "text",
+      "content": "To crack a Wi-Fi password, we capture the WPA/WPA2 handshake and try passwords from a wordlist. In naval style, the handshake is like capturing the secret radio code exchanged between two friendly ships."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Step 1: Put Wi-Fi adapter in monitor mode",
+        "Step 2: Capture handshake packets",
+        "Step 3: Use a wordlist to guess the password"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "LAB PRACTICAL: CAPTURING HANDSHAKE"
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: airmon-ng start wlan0",
+        "Why: Enables monitor mode to capture Wi-Fi signals."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: airodump-ng wlan0mon",
+        "Why: Shows nearby Wi-Fi networks."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: airodump-ng --bssid TARGET_BSSID -c CHANNEL -w capture wlan0mon",
+        "Why: Captures the handshake from the target network."
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/tJgNCPX.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "CRACKING WI-FI PASSWORD (LAB ONLY)"
+    },
+    {
+      "type": "text",
+      "content": "After capturing the handshake, we use a wordlist to crack the password. This is done only on your own Wi-Fi or lab networks."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: aircrack-ng capture.cap -w wordlist.txt",
+        "Why: Tests each password from the wordlist to find the correct one."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "If password is found: you see KEY FOUND!"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "CREATING CUSTOM WORDLIST"
+    },
+    {
+      "type": "text",
+      "content": "A custom wordlist helps when you know personal details about your target network (lab scenario only). In naval style, it's like knowing the naming patterns used by a ship’s crew."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: crunch 8 12 abcdefghijklmnopqrstuvwxyz -o mylist.txt",
+        "Why: Creates a wordlist of lengths 8 to 12 with given characters."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: cewl https://example.com -w website.txt",
+        "Why: Generates a wordlist from words found on a website."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: john --wordlist=passwords.txt --rules --stdout > mutated.txt",
+        "Why: Mutates simple passwords into stronger combinations."
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/8nlHqLb.jpeg"
+      ]
+    },
+
+    {
+      "type": "text",
+      "content": ">> MODULE 16 COMPLETE. NEXT MODULE WILL COVER MOBILE HACKING & ANDROID SECURITY FUNDAMENTALS."
+    }
+
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "id": "module-10",
+  "title": "MODULE 10: DOS & DDOS ATTACKS",
+  "theme": {
+    "style": "naval",
+    "primaryColor": "#001B33",
+    "accentColor": "#00A8C6",
+    "textColor": "#E6F1F5"
+  },
+  "blocks": [
+
+    {
+      "type": "header",
+      "content": "WHAT IS DoS?"
+    },
+    {
+      "type": "text",
+      "content": "DoS (Denial of Service) is an attack where a single system sends a large amount of traffic or requests to a target to overload it. In naval style, it is like one enemy ship blocking a narrow sea path to stop your ship from moving forward."
+    },
+    {
+      "type": "points",
+      "content": [
+        "One attacker targets one system",
+        "Overloads resources",
+        "Makes services slow or unavailable"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "WHAT IS DDoS?"
+    },
+    {
+      "type": "text",
+      "content": "DDoS (Distributed Denial of Service) is a larger version of DoS. Many systems attack the target at the same time. In naval style, it is like many enemy ships blocking your path at once, making movement impossible."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Many attackers attacking one target",
+        "Harder to stop",
+        "Very powerful disruption"
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/5qTtYuk.jpeg",
+        "https://i.imgur.com/4o2xFJU.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "HOW DOES DOS / DDOS WORK?"
+    },
+    {
+      "type": "text",
+      "content": "The goal is to flood the target with more requests than it can handle. When the target cannot manage the load, it stops responding to real users."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Consumes bandwidth",
+        "Consumes CPU or memory",
+        "Crashes services or slows them down"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "PRACTICAL DEMONSTRATION (SAFE LAB ONLY)"
+    },
+    {
+      "type": "text",
+      "content": "We will perform the DoS attack ONLY inside a safe lab environment. Never run these attacks on real servers. This is like practicing naval drills in a training zone, not in real ocean traffic."
+    },
+
+    {
+      "type": "header",
+      "content": "SINGLE-HOST DOS (LAB SIMULATION)"
+    },
+    {
+      "type": "text",
+      "content": "This simulates a simple DoS attack from one machine to a controlled target inside a lab."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: hping3 -S --flood TARGET_IP",
+        "Why: Sends many TCP SYN packets to overload the service."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: slowloris TARGET_IP",
+        "Why: Performs a slow HTTP request attack to exhaust web server connections."
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/tJgNCPX.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "DDoS CONCEPT (EXPLAINED SAFELY)"
+    },
+    {
+      "type": "text",
+      "content": "We will not perform a real DDoS attack. Instead, we explain how it works using a simulated example inside the training environment."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Many machines send traffic to the same target",
+        "Target becomes slow",
+        "Target stops responding to real users"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "TRYHACKME PRACTICAL (SIMULATED)"
+    },
+    {
+      "type": "text",
+      "content": "We will use a safe simulated environment on TryHackMe or local lab to practice DoS concepts. This teaches you how attackers think and how to defend against these attacks."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Understand DoS theory",
+        "Send controlled packets in a lab network",
+        "Monitor system resource usage",
+        "Learn how to detect DoS attempts"
+      ]
+    },
+
+    {
+      "type": "text",
+      "content": ">> MODULE 10 COMPLETE. NEXT WE COVER WEB APPLICATION HACKING."
+    }
+
+  ]
+}

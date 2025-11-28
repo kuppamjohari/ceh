@@ -1,0 +1,148 @@
+{
+  "id": "module-20",
+  "title": "MODULE 20: CRYPTOGRAPHY",
+  "theme": {
+    "style": "naval",
+    "primaryColor": "#001B33",
+    "accentColor": "#00A8C6",
+    "textColor": "#E6F1F5"
+  },
+  "blocks": [
+
+    {
+      "type": "header",
+      "content": "WHAT IS CRYPTOGRAPHY?"
+    },
+    {
+      "type": "text",
+      "content": "Cryptography is the method of protecting information by converting it into a secret format that only authorized people can read. In naval style, it is like using secret codes between warships so enemies cannot understand the message even if they capture it."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Protects sensitive information",
+        "Ensures private communication",
+        "Prevents unauthorized access",
+        "Used in websites, apps, banking, and passwords"
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/Zf0q9aG.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "TYPES OF CRYPTOGRAPHY"
+    },
+    {
+      "type": "points",
+      "content": [
+        "Symmetric Encryption – Same key for encrypt & decrypt",
+        "Asymmetric Encryption – Public & private key pair",
+        "Hashing – One-way transformation",
+        "Digital Signatures – Verify identity & integrity"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "SYMMETRIC ENCRYPTION"
+    },
+    {
+      "type": "text",
+      "content": "Symmetric encryption uses the same key to encrypt and decrypt. In naval style, it is like giving every ship the same secret signal code."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Fast and simple",
+        "Used for bulk data encryption",
+        "Examples: AES, DES, 3DES"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "ASYMMETRIC ENCRYPTION"
+    },
+    {
+      "type": "text",
+      "content": "Asymmetric encryption uses two keys: one public and one private. In naval style, the public key is like a signal visible to all ships, but only the captain with the private key can unlock the message."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Public Key – Shared with everyone",
+        "Private Key – Kept secret",
+        "Examples: RSA, ECC"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "WHAT IS HASHING?"
+    },
+    {
+      "type": "text",
+      "content": "Hashing converts data into a fixed-length value. It cannot be reversed. In naval style, it’s like turning a secret message into a code pattern that cannot be converted back."
+    },
+    {
+      "type": "points",
+      "content": [
+        "One-way function",
+        "Used for password storage",
+        "Used in integrity verification",
+        "Examples: MD5, SHA-1, SHA-256"
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/4o2xFJU.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "DIGITAL SIGNATURES"
+    },
+    {
+      "type": "text",
+      "content": "Digital signatures ensure the message really came from the sender and was not modified. In naval style, it’s like stamping each message with the captain’s unique seal."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Confirms sender identity",
+        "Ensures data was not changed",
+        "Used in emails, software, documents"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "REAL-WORLD CRYPTOGRAPHY USAGE"
+    },
+    {
+      "type": "points",
+      "content": [
+        "WhatsApp end-to-end encryption",
+        "HTTPS websites using SSL/TLS",
+        "Encrypted Wi-Fi (WPA2/WPA3)",
+        "Banking OTPs and secure communication",
+        "Password hashing in databases"
+      ]
+    },
+
+    {
+      "type": "text",
+      "content": ">> MODULE 20 COMPLETE. THIS CONCLUDES YOUR ETHICAL HACKING MODULE SERIES."
+    }
+
+  ]
+}

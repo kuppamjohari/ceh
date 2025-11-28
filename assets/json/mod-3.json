@@ -1,0 +1,147 @@
+{
+  "id": "module-03",
+  "title": "MODULE 03: SCANNING Network",
+  "theme": {
+    "style": "naval",
+    "primaryColor": "#001B33",
+    "accentColor": "#00A8C6",
+    "textColor": "#E6F1F5"
+  },
+  "blocks": [
+
+    {
+      "type": "header",
+      "content": "WHAT IS NETWORK SCANNING?"
+    },
+    {
+      "type": "text",
+      "content": "Network scanning means examining a network to find active systems, open ports, services, and weaknesses. In naval style, it is like using radar to detect ships in the sea and understand their strength."
+    },
+    {
+        "type":"points",
+        "content": [
+            "https://kuppamjohari.github.io/nmap/"
+        ]
+    },
+
+    {
+      "type": "header",
+      "content": "IMPORTANT NOTE"
+    },
+    {
+      "type": "text",
+      "content": "Whenever you see the word TARGET IP, we will use the IP provided in the TryHackMe Blue Room lab."
+    },
+
+    {
+      "type": "header",
+      "content": "NETWORK DISCOVERY"
+    },
+    {
+      "type": "text",
+      "content": "Network discovery helps find which devices are active. This is like detecting all ships present in your sea zone."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: ping -c 4 TARGET_IP",
+        "Why: To check if the target is reachable."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: nmap -sn TARGET_IP/24",
+        "Why: To find active hosts without scanning ports."
+      ]
+    },
+    
+
+    {
+      "type": "header",
+      "content": "PORT SCANNING"
+    },
+    {
+      "type": "text",
+      "content": "Port scanning checks which ports are open. It is like checking which doors on an enemy ship are open, closed, or guarded."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: nmap -p- TARGET_IP",
+        "Why: To scan all ports on the target."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: nmap -p 22,80,443 TARGET_IP",
+        "Why: To scan only important ports."
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "SERVICE & VERSION DETECTION"
+    },
+    {
+      "type": "text",
+      "content": "Version detection tells us what service and version is running on each port. Like identifying the enemy ship’s weapons and communication systems."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: nmap -sV TARGET_IP",
+        "Why: To find service versions on open ports."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: nmap -sC TARGET_IP",
+        "Why: Runs default Nmap scripts for more details."
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "VULNERABILITY SCANNING"
+    },
+    {
+      "type": "text",
+      "content": "This helps identify weaknesses in software or services, like spotting weak armor on a ship."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: nmap --script vuln TARGET_IP",
+        "Why: To scan for known vulnerabilities."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: nikto -h http://TARGET_IP",
+        "Why: To check for web server vulnerabilities."
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "PRACTICAL LAB – TRYHACKME"
+    },
+    {
+      "type": "points",
+      "content": [
+        "We will use the Blue Room from TryHackMe to practice all scans. Replace TARGET IP with the IP given by the room.",
+        "https://tryhackme.com/room/blue"
+    ]
+    },
+
+    {
+      "type": "text",
+      "content": ">> MODULE 03 COMPLETE. NEXT MODULE WILL CONTINUE WITH ENUMERATION."
+    }
+
+  ]
+}

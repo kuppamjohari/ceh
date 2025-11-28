@@ -1,0 +1,151 @@
+{
+  "id": "module-19",
+  "title": "MODULE 19: CLOUD SECURITY",
+  "theme": {
+    "style": "naval",
+    "primaryColor": "#001B33",
+    "accentColor": "#00A8C6",
+    "textColor": "#E6F1F5"
+  },
+  "blocks": [
+
+    {
+      "type": "header",
+      "content": "WHAT IS CLOUD SECURITY?"
+    },
+    {
+      "type": "text",
+      "content": "Cloud security means protecting data, applications, and services hosted on cloud platforms like AWS, Azure, or Google Cloud. In naval style, the cloud is like a large command center in the sky, and cloud security ensures that only trusted ships can connect, communicate, and access resources."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Protect data stored in cloud servers",
+        "Secure cloud applications",
+        "Control user access",
+        "Prevent unauthorized entry"
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/Zf0q9aG.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "WHY CLOUD SECURITY IS IMPORTANT"
+    },
+    {
+      "type": "text",
+      "content": "Most companies use cloud services today. Attackers target cloud environments because they store sensitive data and run important services. Securing the cloud is just as important as securing a naval base."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Always available from anywhere",
+        "Stores sensitive information",
+        "Shared resources increase risk",
+        "Incorrect settings open door for attackers"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "COMMON CLOUD THREATS"
+    },
+    {
+      "type": "text",
+      "content": "Cloud systems face risks from hacking attempts, misconfigurations, and stolen credentials."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Account hijacking",
+        "Misconfigured cloud storage",
+        "Weak access controls",
+        "Unprotected APIs",
+        "Malicious insiders",
+        "Stolen API keys"
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/4o2xFJU.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "CLOUD MISCONFIGURATIONS"
+    },
+    {
+      "type": "text",
+      "content": "Misconfiguration is the biggest cloud security issue. In naval style, it is like leaving the radar room open or forgetting to lock communication terminals."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Public S3 buckets exposed",
+        "Open cloud databases",
+        "Weak IAM permissions",
+        "Unrestricted security groups",
+        "Missing encryption on storage",
+        "Leaked secret keys in code"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "BASIC CLOUD SECURITY CONTROLS"
+    },
+    {
+      "type": "text",
+      "content": "Cloud security depends on shared responsibility: the cloud provider secures the infrastructure, while users must secure their applications and settings."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Enable Multi-Factor Authentication (MFA)",
+        "Use strong IAM roles and least privilege access",
+        "Encrypt sensitive data",
+        "Monitor logs and alerts",
+        "Protect API keys and credentials",
+        "Regularly audit cloud storage and firewall settings"
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/1nMEJmK.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "CLOUD SECURITY TOOLS"
+    },
+    {
+      "type": "points",
+      "content": [
+        "AWS Security Hub",
+        "AWS GuardDuty",
+        "Azure Defender",
+        "GCP Security Command Center",
+        "CloudSploit",
+        "ScoutSuite"
+      ]
+    },
+
+    {
+      "type": "text",
+      "content": ">> MODULE 19 COMPLETE. NEXT MODULE WILL COVER CRYPTOGRAPHY & ENCRYPTION BASICS."
+    }
+
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "id": "module-08",
+  "title": "MODULE 08: SNIFFING & MITM ATTACKS",
+  "theme": {
+    "style": "naval",
+    "primaryColor": "#001B33",
+    "accentColor": "#00A8C6",
+    "textColor": "#E6F1F5"
+  },
+  "blocks": [
+
+    {
+      "type": "header",
+      "content": "WHAT IS SNIFFING?"
+    },
+    {
+      "type": "text",
+      "content": "Sniffing means capturing data that is moving across a network. In naval style, it is like listening to radio communications between enemy ships without them knowing. Sniffing helps attackers read usernames, passwords, and messages if the network is not secure."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Capture network packets",
+        "Read unencrypted information",
+        "Understand network traffic flow"
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/8nlHqLb.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "WHAT IS MITM (MAN-IN-THE-MIDDLE)?"
+    },
+    {
+      "type": "text",
+      "content": "A MITM attack means an attacker places themselves between two communicating systems. In naval terms, it is like an enemy ship secretly positioning itself between two friendly ships and intercepting all messages passing between them."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Attacker sits between two systems",
+        "Intercepts or changes the communication",
+        "Victims think they are talking directly to each other"
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/5qTtYuk.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "WHAT IS ARP POISONING?"
+    },
+    {
+      "type": "text",
+      "content": "ARP poisoning is a technique used to perform MITM attacks. It works by sending fake ARP messages to a network. In naval style, it is like confusing ship radar systems so they think the enemy ship is a friendly one, allowing the attacker to intercept communication."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Send fake ARP replies to victims",
+        "Redirect traffic through attacker’s system",
+        "Used for MITM, sniffing, and session hijacking"
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/tJgNCPX.jpeg"
+      ]
+    },
+
+    {
+      "type": "text",
+      "content": ">> MODULE 08 COMPLETE. NEXT MODULE WILL COVER SOCIAL ENGINEERING AND HUMAN-BASED ATTACKS."
+    }
+
+  ]
+}

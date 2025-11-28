@@ -1,0 +1,131 @@
+{
+  "id": "module-13",
+  "title": "MODULE 13: HACKING WEB SERVERS",
+  "theme": {
+    "style": "naval",
+    "primaryColor": "#001B33",
+    "accentColor": "#00A8C6",
+    "textColor": "#E6F1F5"
+  },
+  "blocks": [
+
+    {
+      "type": "header",
+      "content": "WHAT ARE WEB SERVER MISCONFIGURATIONS?"
+    },
+    {
+      "type": "text",
+      "content": "Web server misconfigurations happen when the server is not set up correctly. This creates security gaps. In naval style, it is like a warship leaving an important gate open or exposing tools on deck for enemies to see."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Default settings left unchanged",
+        "Weak or no authentication",
+        "Old or outdated software",
+        "Directory listing enabled",
+        "Exposed backup files or logs"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "TYPES OF MISCONFIGURATIONS"
+    },
+    {
+      "type": "points",
+      "content": [
+        "Default Credentials – Admin/admin or root/root still active",
+        "Directory Listing – Allows attackers to view hidden folders",
+        "Unpatched Servers – Old software with known vulnerabilities",
+        "Verbose Error Messages – Shows server details to attackers",
+        "Open Debug Modes – Exposes internal system info",
+        "Unrestricted File Upload – Allows dangerous files to be uploaded"
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/tJgNCPX.jpeg",
+        "https://i.imgur.com/8nlHqLb.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "CONFIGURING BURP SUITE"
+    },
+    {
+      "type": "text",
+      "content": "Burp Suite is a powerful web testing tool used to intercept, modify, and analyze web traffic. In naval style, it is like placing a communication interceptor between two ships to understand the full message flow."
+    },
+
+    {
+      "type": "header",
+      "content": "SETTING UP BURP SUITE"
+    },
+    {
+      "type": "points",
+      "content": [
+        "Step 1: Open Burp Suite",
+        "Why: Starts the web security testing platform."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Step 2: Go to Proxy > Intercept",
+        "Why: To capture requests between browser and server."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Step 3: Set browser proxy to 127.0.0.1:8080",
+        "Why: Sends all browser traffic through Burp Suite."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Step 4: Install Burp Certificate in browser",
+        "Why: To avoid HTTPS warnings and read encrypted traffic."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Step 5: Turn Intercept ON/OFF based on testing",
+        "Why: Control when to capture requests."
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/Zf0q9aG.jpeg",
+        "https://i.imgur.com/4o2xFJU.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "WHAT YOU CAN TEST WITH BURP SUITE"
+    },
+    {
+      "type": "points",
+      "content": [
+        "Check how login forms work",
+        "Modify requests before sending",
+        "Find insecure parameters",
+        "Test hidden pages and directories",
+        "Analyze server responses"
+      ]
+    },
+
+    {
+      "type": "text",
+      "content": ">> MODULE 13 COMPLETE. NEXT MODULE WILL COVER WEB APPLICATION VULNERABILITIES AND OWASP TOP 10."
+    }
+
+  ]
+}

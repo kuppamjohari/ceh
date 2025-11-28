@@ -1,0 +1,110 @@
+{
+  "id": "module-01",
+  "title": "MODULE 01: INTRODUCTION TO ETHICAL HACKING",
+  "theme": {
+    "style": "naval",
+    "primaryColor": "#001B33",
+    "accentColor": "#00A8C6",
+    "textColor": "#E6F1F5"
+  },
+  "blocks": [
+
+    {
+      "type": "header",
+      "content": "WHAT IS HACKING?"
+    },
+    {
+      "type": "text",
+      "content": "Hacking is the act of finding and exploiting weaknesses in computer systems, networks, or digital devices. The word can describe both legal and illegal activities, depending on the intent."
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/TiNGAeh.jpeg",
+        "https://i.imgur.com/lJKz4Pz.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "TYPES OF HACKERS (NAVAL CODES)"
+    },
+    {
+      "type": "points",
+      "content": [
+        "White Hat Hackers – Good hackers who protect systems, like friendly ships guarding the coastline.",
+        "Black Hat Hackers – Hackers who attack for money or harm, like unknown ships entering restricted waters.",
+        "Gray Hat Hackers – They do not always follow rules but usually do not try to harm, like civilian ships entering a navy zone.",
+        "Script Kiddies – Beginners who use ready-made tools, like new cadets learning equipment for the first time.",
+        "Hacktivists – Hackers who attack for a message or cause, similar to sending unauthorized signals in protest.",
+        "State-Sponsored Hackers – Hackers supported by a country, like surveillance ships watching from a distance.",
+        "Cyber Terrorists – Dangerous hackers who want to create fear or damage, like hostile ships trying to attack a port."
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/5qTtYuk.jpeg",
+        "https://i.imgur.com/4o2xFJU.jpeg",
+        "https://i.imgur.com/Zf0q9aG.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "CIA TRIAD — BASIC SECURITY PRINCIPLES"
+    },
+    {
+      "type": "text",
+      "content": "The CIA Triad explains three key ideas used to keep information safe and trustworthy."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Confidentiality – Only the right people should access the information.",
+        "Integrity – Information must stay correct and unchanged.",
+        "Availability – Systems should work whenever they are needed."
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/Ql13e84.png",
+        "https://i.imgur.com/tJgNCPX.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "FIVE PHASES OF HACKING"
+    },
+    {
+      "type": "text",
+      "content": "Ethical hacking follows five steps, just like a planned naval operation. Each step helps understand and secure a system better."
+    },
+    {
+      "type": "points",
+      "content": [
+        "1. Reconnaissance – Collecting basic information about the target, like observing from a distance.",
+        "2. Scanning & Enumeration – Identifying open ports and services, similar to using radar on nearby ships.",
+        "3. Gaining Access – Entering the system through a weak point.",
+        "4. Maintaining Access – Staying inside long enough to complete the mission.",
+        "5. Covering Tracks – Hiding activities to avoid detection (simulated ethically)."
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/eeD0N8v.jpeg",
+        "https://i.imgur.com/1nMEJmK.jpeg",
+        "https://i.imgur.com/g88MazY.jpeg"
+      ]
+    },
+
+    {
+      "type": "text",
+      "content": ">> MODULE 01 COMPLETE. YOU ARE READY FOR MODULE 02. TRAINING SHIP STANDING BY."
+    }
+
+  ]
+}

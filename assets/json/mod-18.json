@@ -1,0 +1,153 @@
+{
+  "id": "module-18",
+  "title": "MODULE 18: IOT HACKING",
+  "theme": {
+    "style": "naval",
+    "primaryColor": "#001B33",
+    "accentColor": "#00A8C6",
+    "textColor": "#E6F1F5"
+  },
+  "blocks": [
+
+    {
+      "type": "header",
+      "content": "WHAT IS IOT HACKING?"
+    },
+    {
+      "type": "text",
+      "content": "IoT hacking means testing the security of smart devices such as cameras, sensors, smart bulbs, smart locks, and home routers. In naval style, it is like checking small unmanned boats, radars, and sensors placed around the warship to ensure no device can be misused."
+    },
+    {
+      "type": "points",
+      "content": [
+        "IoT devices often have weak security",
+        "Many use default passwords",
+        "Some expose dangerous ports",
+        "Firmware usually outdated"
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/5qTtYuk.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "IOT ATTACK SURFACE"
+    },
+    {
+      "type": "text",
+      "content": "The attack surface refers to all the possible entry points an attacker can use to control or misuse an IoT device."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Open ports on IoT devices",
+        "Unsecured Wi-Fi connections",
+        "Default usernames/passwords",
+        "Weak mobile app APIs",
+        "Unencrypted communication",
+        "Outdated firmware"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "COMMON IOT VULNERABILITIES"
+    },
+    {
+      "type": "points",
+      "content": [
+        "Telnet/SSH open with default passwords",
+        "Exposed admin panels",
+        "Weak or no encryption",
+        "Hardcoded credentials inside firmware",
+        "Unsafe cloud integrations",
+        "Insecure update system"
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/Zf0q9aG.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "BASIC IOT HACKING TECHNIQUES"
+    },
+    {
+      "type": "text",
+      "content": "IoT hacking focuses on finding weaknesses in devices, apps, and network communication. Think of it like analyzing small naval drones for weak spots that enemies can exploit."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Port scanning with Nmap",
+        "Checking open services (Telnet, SSH, HTTP)",
+        "Testing default credentials",
+        "Intercepting mobile app traffic",
+        "Firmware analysis",
+        "Testing insecure cloud communication"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "IOT PRACTICAL DEMO (LAB)"
+    },
+    {
+      "type": "text",
+      "content": "IoT testing should be done only on devices you own or inside a controlled lab. Below are safe educational steps."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Step 1: Scan device",
+        "Command: nmap -sV TARGET_IP",
+        "Why: Finds open ports and running services."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Step 2: Try default credentials",
+        "Common: admin/admin, root/root",
+        "Why: Many IoT devices never change defaults."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Step 3: Capture mobile app traffic via Burp",
+        "Why: Many IoT apps expose sensitive information."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Step 4: Download firmware if available",
+        "Command: binwalk firmware.bin",
+        "Why: Extracts hidden files and credentials."
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/tJgNCPX.jpeg"
+      ]
+    },
+
+    {
+      "type": "text",
+      "content": ">> MODULE 18 COMPLETE. NEXT MODULE WILL COVER CLOUD SECURITY OR CRYPTOGRAPHY BASED ON YOUR CHOICE."
+    }
+
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "id": "module-11",
+  "title": "MODULE 11: SESSION HIJACKING",
+  "theme": {
+    "style": "naval",
+    "primaryColor": "#001B33",
+    "accentColor": "#00A8C6",
+    "textColor": "#E6F1F5"
+  },
+  "blocks": [
+
+    {
+      "type": "header",
+      "content": "WHAT IS SESSION HIJACKING?"
+    },
+    {
+      "type": "text",
+      "content": "Session hijacking means stealing or taking over a user's active session on a website or application. In naval style, it is like secretly taking control of a ship's communication channel while the ship believes it is still talking to its own base."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Attacker steals the user session ID",
+        "Attacker uses the session to act as the victim",
+        "Attacker can access accounts without knowing passwords"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "HOW SESSION HIJACKING WORKS"
+    },
+    {
+      "type": "text",
+      "content": "Websites give each user a session ID after login. If an attacker steals that ID, they can log in as the user. This is like copying a ship's secret access code and entering restricted naval zones freely."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Session ID stored in cookies",
+        "If cookie is stolen, session is stolen",
+        "Man-in-the-middle attacks help capture sessions"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "COMMON SESSION HIJACKING METHODS"
+    },
+    {
+      "type": "points",
+      "content": [
+        "Sniffing – Capturing cookies over unencrypted networks",
+        "MITM – Sitting between user and server",
+        "XSS – Stealing cookies using malicious scripts",
+        "Session Fixation – Forcing a victim to use a known session ID"
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/5qTtYuk.jpeg",
+        "https://i.imgur.com/tJgNCPX.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "WHY SESSION HIJACKING IS DANGEROUS"
+    },
+    {
+      "type": "points",
+      "content": [
+        "Attacker can access personal accounts",
+        "Attacker can perform actions as the user",
+        "No password is required once the session is stolen",
+        "Victim does not know they were hacked"
+      ]
+    },
+
+    {
+      "type": "text",
+      "content": ">> MODULE 11 COMPLETE. NEXT WE MOVE TO WEB APPLICATION HACKING."
+    }
+
+  ]
+}

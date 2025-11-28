@@ -1,0 +1,170 @@
+{
+  "id": "module-14",
+  "title": "MODULE 14: HACKING WEB APPLICATIONS",
+  "theme": {
+    "style": "naval",
+    "primaryColor": "#001B33",
+    "accentColor": "#00A8C6",
+    "textColor": "#E6F1F5"
+  },
+  "blocks": [
+
+    {
+      "type": "header",
+      "content": "WHAT IS OWASP TOP 10?"
+    },
+    {
+      "type": "text",
+      "content": "OWASP Top 10 is a list of the 10 most critical web application vulnerabilities. In naval style, it is like a list of the top dangers that can damage your ship. Developers and security teams use it to secure applications."
+    },
+    {
+      "type": "points",
+      "content": [
+        "A01 – Broken Access Control",
+        "A02 – Cryptographic Failures",
+        "A03 – Injection Attacks",
+        "A04 – Insecure Design",
+        "A05 – Security Misconfiguration",
+        "A06 – Vulnerable Components",
+        "A07 – Identification & Authentication Failures",
+        "A08 – Software & Data Integrity Failures",
+        "A09 – Security Logging & Monitoring Failures",
+        "A10 – Server-Side Request Forgery (SSRF)"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "CLIENT-SIDE VS SERVER-SIDE ATTACKS"
+    },
+    {
+      "type": "text",
+      "content": "Client-side attacks affect the user's browser, while server-side attacks affect the web server. In naval style, client-side is attacking the small boats around the ship; server-side is attacking the main ship engine room."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Client-Side Attacks: Run inside user's browser",
+        "Server-Side Attacks: Run on the web server"
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Client-Side Example: XSS",
+        "Server-Side Example: LFI, SQL Injection"
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/5qTtYuk.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "XSS (CROSS-SITE SCRIPTING)"
+    },
+    {
+      "type": "text",
+      "content": "XSS happens when a web application allows attackers to inject JavaScript. In naval style, it's like smuggling a hidden message onto a ship that runs automatically when read."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Steal cookies",
+        "Steal session IDs",
+        "Redirect users",
+        "Deface websites"
+      ]
+    },
+    {
+      "type": "header",
+      "content": "XSS PRACTICAL DEMO (test.php)"
+    },
+    {
+      "type": "points",
+      "content": [
+        "URL: http://TARGET_IP/test.php?msg=<script>alert('XSS')</script>",
+        "Why: Shows simple reflected XSS in action."
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/tJgNCPX.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "LFI (LOCAL FILE INCLUSION)"
+    },
+    {
+      "type": "text",
+      "content": "LFI happens when a website loads files based on user input, allowing attackers to read system files. In naval style, it is like accessing the enemy ship's internal documents through a wrongfully open storage hatch."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Read sensitive files",
+        "Access server configuration",
+        "View logs and passwords",
+        "Leads to remote code execution sometimes"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "LFI PRACTICAL DEMO (test.php)"
+    },
+    {
+      "type": "points",
+      "content": [
+        "URL: http://TARGET_IP/test.php?page=/etc/passwd",
+        "Why: Reads Linux password file using LFI."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "URL: http://TARGET_IP/test.php?page=../../../../windows/win.ini",
+        "Why: Reads Windows file using LFI path traversal."
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/4o2xFJU.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "TRYHACKME – LO-FI ROOM"
+    },
+    {
+      "type": "text",
+      "content": "We will use the TryHackMe LO-FI room to practice LFI, file traversal, and reading sensitive files. This room gives hands-on experience in identifying server-side file inclusion bugs."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Room Link: https://tryhackme.com/room/lfi",
+        "Practice reading server files",
+        "Understand file traversal paths",
+        "Learn how to detect unsafe file includes"
+      ]
+    },
+
+    {
+      "type": "text",
+      "content": ">> MODULE 14 COMPLETE. NEXT MODULE WILL FOCUS ON SQL INJECTION AND DATABASE HACKING."
+    }
+
+  ]
+}

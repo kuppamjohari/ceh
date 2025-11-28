@@ -1,0 +1,128 @@
+{
+  "id": "module-09",
+  "title": "MODULE 09: SOCIAL ENGINEERING",
+  "theme": {
+    "style": "naval",
+    "primaryColor": "#001B33",
+    "accentColor": "#00A8C6",
+    "textColor": "#E6F1F5"
+  },
+  "blocks": [
+
+    {
+      "type": "header",
+      "content": "WHAT IS SOCIAL ENGINEERING?"
+    },
+    {
+      "type": "text",
+      "content": "Social engineering means tricking people into giving information or performing actions that help an attacker. In naval style, it is like an enemy disguising themselves as a friendly ship to get access to restricted waters. Instead of attacking systems, social engineering targets human trust."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Targets humans, not systems",
+        "Uses deception and psychological tricks",
+        "Can steal passwords or sensitive data",
+        "Very common in cyber attacks"
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/4o2xFJU.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "SOCIAL ENGINEERING TOOLKIT (SE-TOOLKIT)"
+    },
+    {
+      "type": "text",
+      "content": "SE-Toolkit is a powerful toolkit used for social engineering attacks. We can use it to clone real websites to trick victims into entering their credentials. This is for educational and lab purposes only."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: setoolkit",
+        "Why: To start the Social Engineering Toolkit."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Choose: Social-Engineering Attacks",
+        "Why: Opens the attack menu."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Choose: Website Attack Vectors",
+        "Why: To create fake login pages."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Choose: Credential Harvester Attack",
+        "Why: To capture login usernames and passwords."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Choose: Site Cloner",
+        "Why: To clone a real website for testing."
+      ]
+    },
+    {
+      "type": "header",
+      "content": "EMAIL SPOOFING USING EMKEI.CZ"
+    },
+    {
+      "type": "text",
+      "content": "Email spoofing means sending an email that looks like it came from someone else. In naval terms, it is like faking a message from a navy commander to mislead ships. Emkei.cz is a free tool used for spoofing emails for educational purposes."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Website: https://emkei.cz/",
+        "Why: Allows sending fake emails for testing."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Set 'From' address: Fake sender email",
+        "Why: Makes the email look real to the target."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Set 'To' address: Victim test email (lab only)",
+        "Why: To demonstrate social engineering attacks safely."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Write message and send",
+        "Why: Shows how easy it is to spoof emails and why awareness is important."
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/BA6FQ0c.jpeg"
+      ]
+    },
+
+    {
+      "type": "text",
+      "content": ">> MODULE 09 COMPLETE. NEXT MODULE WILL COVER WEB APPLICATION HACKING AND OWASP TOP 10."
+    }
+
+  ]
+}

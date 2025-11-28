@@ -1,0 +1,90 @@
+{
+  "id": "module-12",
+  "title": "MODULE 12: EVADE IDS, FIREWALL & HONEYPOT",
+  "theme": {
+    "style": "naval",
+    "primaryColor": "#001B33",
+    "accentColor": "#00A8C6",
+    "textColor": "#E6F1F5"
+  },
+  "blocks": [
+
+    {
+      "type": "header",
+      "content": "WHAT IS IDS?"
+    },
+    {
+      "type": "text",
+      "content": "IDS means Intrusion Detection System. It monitors network traffic and alerts when suspicious activity happens. In naval style, IDS is like a radar system on a warship that detects unknown ships or unusual movement in the sea."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Detects attacks and unusual traffic",
+        "Alerts security teams",
+        "Does NOT block — only detects",
+        "Examples: Snort, Suricata"
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/1nMEJmK.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "WHAT IS A FIREWALL?"
+    },
+    {
+      "type": "text",
+      "content": "A firewall controls what traffic is allowed or blocked. It is like a naval checkpoint that decides which ships can enter the harbor and which ships must stay out."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Blocks unwanted traffic",
+        "Allows safe and approved traffic",
+        "Protects network boundaries",
+        "Examples: iptables, pfSense, FortiGate"
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/Zf0q9aG.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "WHAT IS A HONEYPOT?"
+    },
+    {
+      "type": "text",
+      "content": "A honeypot is a fake system created to attract attackers. It is like placing a decoy ship in the sea to watch how the enemy behaves. When attackers interact with it, security teams learn their methods."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Fake system used to trap attackers",
+        "Collects attacker behavior",
+        "Protects the real network",
+        "Examples: Dionaea, Cowrie, Honeyd"
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/4o2xFJU.jpeg"
+      ]
+    },
+
+    {
+      "type": "text",
+      "content": ">> MODULE 12 COMPLETE. NEXT MODULE WILL COVER HACKING WEB SERVERS & WEB APPLICATIONS."
+    }
+
+  ]
+}

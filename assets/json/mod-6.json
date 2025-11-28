@@ -1,0 +1,124 @@
+{
+  "id": "module-06",
+  "title": "MODULE 06: SYSTEM HACKING",
+  "theme": {
+    "style": "naval",
+    "primaryColor": "#001B33",
+    "accentColor": "#00A8C6",
+    "textColor": "#E6F1F5"
+  },
+  "blocks": [
+
+    {
+      "type": "header",
+      "content": "WHAT IS SYSTEM HACKING?"
+    },
+    {
+      "type": "text",
+      "content": "System hacking means gaining access to a computer or account by breaking through its security. In naval style, it is like boarding an enemy ship by entering through a weak door or unguarded section."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Gain access to user accounts",
+        "Break weak passwords",
+        "Exploit login systems",
+        "Move deeper into the target"
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/eeD0N8v.jpeg",
+        "https://i.imgur.com/1nMEJmK.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "PASSWORD CRACKING"
+    },
+    {
+      "type": "text",
+      "content": "Password cracking means trying different passwords until one works. It is like trying multiple keys on a locked door of a ship until the right one opens it."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Brute Force – Try every possible password",
+        "Dictionary Attack – Use a list of common passwords",
+        "Hybrid Attack – Mix dictionary words with symbols or numbers"
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: hydra -l USERNAME -P WORDLIST.txt TARGET_IP service",
+        "Why: To try many passwords automatically and find the correct one"
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/lJKz4Pz.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "WEB LOGIN BRUTE FORCE"
+    },
+    {
+      "type": "text",
+      "content": "Web brute force means trying multiple passwords on a website login page. It is like trying different access codes on a digital lock until it opens."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: hydra -l USERNAME -P WORDLIST.txt TARGET_IP http-post-form",
+        "Why: To test many password combinations on a web login form",
+        "Hydra can attack: login pages, SSH, FTP, RDP, SMTP and more"
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/T2t8RVw.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "TRYHACKME – HYDRA ROOM"
+    },
+    {
+      "type": "text",
+      "content": "We will use the Hydra Room on TryHackMe to practice password cracking and brute forcing. Whenever you see TARGET IP, use the IP provided inside the TryHackMe room."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Hydra Room Link: https://tryhackme.com/room/hydra",
+        "Perform SSH brute force",
+        "Perform web login brute force",
+        "Learn how Hydra works",
+        "Understand safe usage of brute force tools"
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/pjfgInU.jpeg"
+      ]
+    },
+
+    {
+      "type": "text",
+      "content": ">> MODULE 06 COMPLETE. NEXT WE MOVE TO MALWARE, TROJANS, AND COVERING TRACKS."
+    }
+
+  ]
+}

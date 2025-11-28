@@ -1,0 +1,106 @@
+{
+  "id": "module-05",
+  "title": "MODULE 05: VULNERABILITY ANALYSIS",
+  "theme": {
+    "style": "naval",
+    "primaryColor": "#001B33",
+    "accentColor": "#00A8C6",
+    "textColor": "#E6F1F5"
+  },
+  "blocks": [
+
+    {
+      "type": "header",
+      "content": "WHAT IS VULNERABILITY ANALYSIS?"
+    },
+    {
+      "type": "text",
+      "content": "Vulnerability analysis means checking systems, services, and applications for weaknesses. In naval style, it is like inspecting an enemy ship to find weak armor, old weapons, or damaged areas before planning an attack."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Find weak software versions",
+        "Find misconfigurations",
+        "Find open ports with risks",
+        "Identify areas that attackers can exploit"
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/8E9nhFZ.jpeg",
+        "https://i.imgur.com/1nMEJmK.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "NESSUS"
+    },
+    {
+      "type": "text",
+      "content": "Nessus is one of the most powerful vulnerability scanners. It automatically checks for thousands of known weaknesses. It is like using a high-tech naval scanner that can instantly identify weak points on ships."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Why we use it: To find known vulnerabilities quickly",
+        "Why we use it: To scan for outdated software and weak services",
+        "Why we use it: To generate security reports for fixing issues"
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Common Use: Scan entire networks",
+        "Common Use: Find CVEs and risk levels",
+        "Common Use: Automated security assessment"
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/C8zeCbi.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "OWASP ZAP"
+    },
+    {
+      "type": "text",
+      "content": "OWASP ZAP is a free tool used to find security issues in web applications. It is like using a naval drone to closely inspect a ship’s surface for cracks or hidden faults."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Why we use it: To test websites for security issues",
+        "Why we use it: To find insecure forms, inputs, and URLs",
+        "Why we use it: To identify common web vulnerabilities"
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Common Use: Spider/crawl the website",
+        "Common Use: Automated web vulnerability scan",
+        "Common Use: Manual testing for SQLi, XSS, and more"
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/T2t8RVw.jpeg"
+      ]
+    },
+
+    {
+      "type": "text",
+      "content": ">> MODULE 05 COMPLETE. NEXT MODULE WILL COVER SYSTEM HACKING AND EXPLOITATION."
+    }
+
+  ]
+}

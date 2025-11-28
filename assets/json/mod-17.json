@@ -1,0 +1,170 @@
+{
+  "id": "module-17",
+  "title": "MODULE 17: HACKING MOBILE PLATFORMS",
+  "theme": {
+    "style": "naval",
+    "primaryColor": "#001B33",
+    "accentColor": "#00A8C6",
+    "textColor": "#E6F1F5"
+  },
+  "blocks": [
+
+    {
+      "type": "header",
+      "content": "WHAT IS MOBILE HACKING?"
+    },
+    {
+      "type": "text",
+      "content": "Mobile hacking means testing the security of Android or iOS devices and their applications. In naval style, it is like checking if communication devices on a ship are safe, secure, and not leaking information."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Analyze mobile apps",
+        "Find insecure storage",
+        "Check permissions misuse",
+        "Test network communication",
+        "Detect weak authentication"
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/5qTtYuk.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "ANDROID PLATFORM ATTACK SURFACE"
+    },
+    {
+      "type": "text",
+      "content": "Android is easier to test because apps can be downloaded, unpacked, and analyzed. Attackers target weak configurations or insecure coding. In naval style, it’s like inspecting the ship’s tools and equipment for weaknesses."
+    },
+    {
+      "type": "points",
+      "content": [
+        "APK file analysis",
+        "Weak or exposed API keys",
+        "Hardcoded credentials",
+        "Insecure data storage",
+        "Unencrypted traffic"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "COMMON MOBILE HACKING TECHNIQUES"
+    },
+    {
+      "type": "points",
+      "content": [
+        "Reverse engineering APK files",
+        "Modifying APK (smali editing)",
+        "Traffic interception using Burp Suite",
+        "Bypassing root detection or SSL pinning",
+        "Testing insecure login systems"
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/Zf0q9aG.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "APK ANALYSIS (LAB DEMO)"
+    },
+    {
+      "type": "text",
+      "content": "APK files can be decompiled to view code, check permissions, and understand how the app works. This is done only in labs or on apps you own."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: apktool d app.apk",
+        "Why: Decompiles APK to smali code and resources."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: jadx-gui app.apk",
+        "Why: View readable Java code from APK."
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "INSECURE MOBILE PERMISSIONS"
+    },
+    {
+      "type": "text",
+      "content": "Some apps request more permissions than needed. In naval style, it's like giving every crew member access to the control room — risky and unnecessary."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Camera access without reason",
+        "Location tracking always ON",
+        "Storage read/write access",
+        "Contacts & SMS access"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "MITM ON MOBILE TRAFFIC"
+    },
+    {
+      "type": "text",
+      "content": "Attackers intercept mobile traffic using tools like Burp Suite. This is like monitoring all signals between a ship and shore to identify leaks or weaknesses."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Setup device proxy to Burp",
+        "Install Burp CA certificate",
+        "Capture app traffic",
+        "Check for sensitive data sent over HTTP"
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/4o2xFJU.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "MOBILE MALWARE BASICS"
+    },
+    {
+      "type": "text",
+      "content": "Mobile malware targets phones to steal data, track activity, or control the device. In naval terms, it's like placing a spy device inside the captain's cabin."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Keyloggers",
+        "Spyware",
+        "SMS forwarders",
+        "Fake apps",
+        "Infected APK modifications"
+      ]
+    },
+
+    {
+      "type": "text",
+      "content": ">> MODULE 17 COMPLETE. NEXT MODULE WILL COVER IoT & SMART DEVICE HACKING."
+    }
+
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "module-04",
+  "title": "MODULE 04: ENUMERATION",
+  "theme": {
+    "style": "naval",
+    "primaryColor": "#001B33",
+    "accentColor": "#00A8C6",
+    "textColor": "#E6F1F5"
+  },
+  "blocks": [
+
+    {
+      "type": "header",
+      "content": "WHAT IS ENUMERATION?"
+    },
+    {
+      "type": "text",
+      "content": "Enumeration is the process of extracting detailed information from a target after scanning. In naval style, scanning tells you how many ships are in the sea, but enumeration tells you what crew they have, what weapons they use, and what systems they run."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Find usernames",
+        "Find shared folders or files",
+        "Find exposed services",
+        "Collect system information"
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/8nlHqLb.jpeg",
+        "https://i.imgur.com/1nMEJmK.jpeg"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "ENUMERATING SMB (PORT 445)"
+    },
+    {
+      "type": "text",
+      "content": "SMB stands for Server Message Block. It allows file sharing across a network. Enumerating SMB is like checking what storage rooms or cargo holds an enemy ship has left open."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: nmap --script smb-os-discovery TARGET_IP",
+        "Why: To find SMB version, OS details, and server info."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: nmap --script smb-enum-shares TARGET_IP",
+        "Why: To list shared folders on the target."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: smbclient -L //TARGET_IP/ -N",
+        "Why: To view SMB shares without a password."
+      ]
+    },
+    {
+      "type": "points",
+      "content": [
+        "Command: smbclient //TARGET_IP/SHARE_NAME -N",
+        "Why: To access a specific SMB share if it is open."
+      ]
+    },
+
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/tJgNCPX.jpeg",
+        "https://i.imgur.com/Ql13e84.png"
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "TRYHACKME – BLUE ROOM"
+    },
+    {
+      "type": "text",
+      "content": "We will use the Blue Room on TryHackMe to perform real SMB enumeration. Whenever you see TARGET IP, replace it with the IP shown inside the TryHackMe Blue Room machine."
+    },
+    {
+      "type": "points",
+      "content": [
+        "Find open SMB ports",
+        "List shares",
+        "Identify misconfigurations",
+        "Access public shares if available"
+      ]
+    },
+    {
+      "type": "gallery",
+      "images": [
+        "https://i.imgur.com/pjfgInU.jpeg"
+      ]
+    },
+
+    {
+      "type": "text",
+      "content": ">> MODULE 04 COMPLETE. NEXT WE MOVE TO VULNERABILITY ANALYSIS AND SYSTEM HACKING."
+    }
+
+  ]
+}
