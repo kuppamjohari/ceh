@@ -80,7 +80,7 @@
 
     {
       "type": "header",
-      "content": "TRYHACKME – BLUE ROOM"
+      "content": "TRYHACKME – BLUE ROOM & Network Services Room"
     },
     {
       "type": "text",
@@ -120,5 +120,6 @@
 
   ]
 }
+
 
 
