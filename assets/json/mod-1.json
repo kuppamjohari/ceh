@@ -20,7 +20,7 @@
     {
       "type": "gallery",
       "images": [
-        "https://i.imgur.com/TiNGAeh.jpeg",
+        "assets/img/1.jpg",
         "https://i.imgur.com/lJKz4Pz.jpeg"
       ]
     },
@@ -108,3 +108,4 @@
 
   ]
 }
+
