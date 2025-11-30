@@ -29,7 +29,7 @@
     {
       "type": "gallery",
       "images": [
-        "assets/img/20.jpg"
+        "assets/img/19.jpg"
       ]
     },
 
@@ -115,7 +115,7 @@
     {
       "type": "gallery",
       "images": [
-        "assets/img/21.jpg"
+        "assets/img/20.jpg"
       ]
     },
 
@@ -126,4 +126,5 @@
 
   ]
 }
+
 
