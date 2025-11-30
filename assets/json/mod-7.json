@@ -66,8 +66,7 @@
     {
       "type": "gallery",
       "images": [
-        "https://i.imgur.com/8nlHqLb.jpeg",
-        "https://i.imgur.com/5qTtYuk.jpeg"
+        "assets/img/14.jpg"
       ]
     },
 
@@ -148,8 +147,7 @@
     {
       "type": "gallery",
       "images": [
-        "https://i.imgur.com/4o2xFJU.jpeg",
-        "https://i.imgur.com/Zf0q9aG.jpeg"
+        "assets/img/15.jpg"
       ]
     },
 
@@ -160,3 +158,4 @@
 
   ]
 }
+
