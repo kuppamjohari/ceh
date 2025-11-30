@@ -101,6 +101,15 @@
         "Custom local servers"
       ]
     },
+    {
+      "type": "gallery",
+      "images": [
+        "assets/img/35.jpg",
+        "assets/img/36.jpg",
+        "assets/img/37.jpg",
+        "assets/img/38.jpg"
+      ]
+    },
 
     {
       "type": "text",
@@ -109,3 +118,4 @@
 
   ]
 }
+
