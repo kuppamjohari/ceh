@@ -60,8 +60,7 @@
     {
       "type": "gallery",
       "images": [
-        "https://i.imgur.com/5qTtYuk.jpeg",
-        "https://i.imgur.com/tJgNCPX.jpeg"
+        "assets/img/23.jpg"
       ]
     },
 
@@ -86,3 +85,4 @@
 
   ]
 }
+
