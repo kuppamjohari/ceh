@@ -84,7 +84,7 @@
     },
     {
       "type": "text",
-      "content": "We will use the Blue Room on TryHackMe to perform real SMB enumeration. Whenever you see TARGET IP, replace it with the IP shown inside the TryHackMe Blue Room machine."
+      "content": "We will use the Blue Room & Network Services on TryHackMe to perform real SMB enumeration. Whenever you see TARGET IP, replace it with the IP shown inside the TryHackMe Blue / Network Services Room machine."
     },
     {
       "type": "points",
@@ -93,6 +93,17 @@
         "List shares",
         "Identify misconfigurations",
         "Access public shares if available"
+      ]
+    },
+    {
+      "type": "text",
+      "content": "Room Links"
+    },
+    {
+      "type": "points",
+      "content": [
+        "https://tryhackme.com/room/networkservices",
+        "https://tryhackme.com/room/blue"
       ]
     },
     {
@@ -109,4 +120,5 @@
 
   ]
 }
+
 
