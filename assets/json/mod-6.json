@@ -30,8 +30,7 @@
     {
       "type": "gallery",
       "images": [
-        "https://i.imgur.com/eeD0N8v.jpeg",
-        "https://i.imgur.com/1nMEJmK.jpeg"
+        "assets/img/51.jpg"
       ]
     },
 
@@ -62,7 +61,7 @@
     {
       "type": "gallery",
       "images": [
-        "https://i.imgur.com/lJKz4Pz.jpeg"
+        "assets/img/52.jpg"
       ]
     },
 
@@ -86,7 +85,7 @@
     {
       "type": "gallery",
       "images": [
-        "https://i.imgur.com/T2t8RVw.jpeg"
+        "assets/img/53.jpg"
       ]
     },
 
@@ -111,7 +110,7 @@
     {
       "type": "gallery",
       "images": [
-        "https://i.imgur.com/pjfgInU.jpeg"
+        "assets/img/54.jpg"
       ]
     },
 
@@ -122,3 +121,4 @@
 
   ]
 }
+
