@@ -44,7 +44,9 @@
       "type": "gallery",
       "images": [
         "assets/img/2.jpg",
-        "assets/img/3.jpg"
+        "assets/img/3-1.jpg",
+        "assets/img/3-2.jpg",
+        "assets/img/2-2.jpg"
       ]
     },
 
@@ -103,5 +105,6 @@
 
   ]
 }
+
 
 
